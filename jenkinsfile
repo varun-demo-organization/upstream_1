@@ -2,8 +2,12 @@
 properties([
    [$class: 'GithubProjectProperty',
    displayName: '',
-   projectUrlStr: 'https://git@github.com:varun-demo-organization/demo_1.git/'],
+   projectUrlStr: 'https://git@github.com:varun-demo-organization/upstream_1.git/'],
    pipelineTriggers([githubPush()])])
+upstream(
+  threshold: 'SUCCESS',
+  upstreamProjects: 'https://github.com/varun-demo-project/upstream_2'
+  ) 
 
 pipeline {
    agent any
