@@ -5,7 +5,7 @@ properties([
    projectUrlStr: 'https://git@github.com:varun-demo-organization/upstream_1.git/'],
    pipelineTriggers([upstream(
   threshold: 'SUCCESS',
-  upstreamProjects: 'https://github.com/varun-demo-project/upstream_2'
+  upstreamProjects: 'https://github.com/varun-demo-organization/upstream_2.git/'
   ) ])])
 
 pipeline {
